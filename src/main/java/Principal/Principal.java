@@ -1,6 +1,7 @@
 
 package Principal;
 
+import ConversorDecimal.OpcionesConversionNum;
 import ConversorLongitud.OpcionesConversionLongitud;
 import ConversorMonedas.OpcionesConversion;
 import javax.swing.JOptionPane;
@@ -16,10 +17,11 @@ public class Principal {
         
         OpcionesConversion conversion = new OpcionesConversion();
         OpcionesConversionLongitud conversionLong = new OpcionesConversionLongitud();
+        OpcionesConversionNum conversionNum = new OpcionesConversionNum();
         
        while(true) {
 		String opciones = JOptionPane.showInputDialog(null, "Seleccione una opción de conversión", "Menú", JOptionPane.PLAIN_MESSAGE, null, 
-                        new Object[] {"Conversor de Monedas", "Conversor de Longitud"}, "Elegir").toString(); 
+                        new Object[] {"Conversor de Monedas", "Conversor de Longitud", "Conversor de Sistemas Numericos"}, "Elegir").toString(); 
         
                 
         switch(opciones){
@@ -49,10 +51,24 @@ public class Principal {
 		} else {
 			JOptionPane.showMessageDialog(null, "Programa finalizado");
 		}
-           
-       }
-       break; 
+                break;
+                
+            case "Conversor de Sistemas Numericos":
+                String input2 = JOptionPane.showInputDialog(null, "Ingrese el valor a convertir");
+		int valorRecibidoNum = Integer.parseInt(input2);
+                conversionNum.ConvertirNum(valorRecibidoNum);
+		
+				
+		int respuestaNum = JOptionPane.showConfirmDialog(null, "¿Desea realizar otra Conversión?");
+		if(JOptionPane.OK_OPTION == respuestaNum) {
+			System.out.println("Entra");
+		} else {
+			JOptionPane.showMessageDialog(null, "Programa finalizado");
+		}
+            break; 
+        }
+       
         
-    }    
-}   
+        }    
+    }   
 }
