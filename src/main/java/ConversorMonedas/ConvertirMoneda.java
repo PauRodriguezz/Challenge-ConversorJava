@@ -35,6 +35,24 @@ public class ConvertirMoneda {
 	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaPChilenos + " Pesos Chilenos");
     }
     
+    public void ConvertirPesosArgentinosLibraEsterlinas(double valor){
+        double monedaLibEster = valor / 0.00235;
+        monedaLibEster = (double)Math.round(monedaLibEster * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaLibEster + " Libras Esterlinas");
+    }
+    
+    public void ConvertirPesosArgentinosYen( double valor){
+        double monedaYen = valor / 2.4;
+        monedaYen = (double)Math.round(monedaYen * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaYen + "Yen Japonés");
+    } 
+    
+    public void ConvertirPesosArgentinosWon (double valor){
+        double monedaWon = valor / 0.259;
+        monedaWon = (double)Math.round(monedaWon * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaWon + "Won sub-coreano");
+    }
+    
     ///////////////////////////
     public void ConvertirDolarPesosArgentinos (double valor){
         double monedaArgentina = 344.82 * valor;
@@ -58,6 +76,24 @@ public class ConvertirMoneda {
     public void ConvertirPChilenosPesosArgentinos (double valor){
         double monedaArgentina = 137.68 * valor;
 	monedaArgentina = (double)Math.round(monedaArgentina * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaArgentina + " Pesos Argentinos");
+    }
+    
+    public void ConvertirLibraEsterlinasPesosArgentinos(double valor){
+        double monedaArgentina = 0.00235 * valor;
+        monedaArgentina = (double)Math.round(monedaArgentina * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaArgentina + " Pesos Argentinos");
+    }
+    
+    public void ConvertirYenPesosArgentinos(double valor){
+        double monedaArgentina = 2.4 * valor;
+        monedaArgentina = (double)Math.round(monedaArgentina * 100d) /100 ;
+	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaArgentina + " Pesos Argentinos");
+    }
+    
+    public void ConvertirWonPesosArgentinos(double valor){
+        double monedaArgentina = 0.259 * valor;
+        monedaArgentina = (double)Math.round(monedaArgentina * 100d) /100 ;
 	JOptionPane.showMessageDialog(null, "Tienes $ " + monedaArgentina + " Pesos Argentinos");
     }
 }
