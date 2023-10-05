@@ -45,7 +45,5 @@ Recordando que también debe ser posible convertir inversamente, es decir:
 - NetBeans
 
 
-## Créditos
-Este proyecto fue creado como parte del desafío Java del programa "One" de backend de Oracle y Alura por [Tu Nombre].
 
 
